@@ -30,7 +30,15 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+LOGIN_REDIRECT_URL = '/dashboard'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 INSTALLED_APPS = [
+	"crispy_forms",
+    "crispy_bootstrap5",
 	'inventory',
     'django.contrib.admin',
     'django.contrib.auth',
