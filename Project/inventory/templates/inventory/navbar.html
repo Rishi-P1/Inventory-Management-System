@@ -14,15 +14,18 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarColor01">
       <ul class="navbar-nav">
+        
+        {% if user.is_authenticated %}
+
         <li class="nav-item">
-          <a class="nav-link" href="#">Update Inventory</a>
+          <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'inventory' %}">Inventory</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Finance</a>
         </li>
-        
-        {% if user.is_authenticated %}
-
         <li class="nav-item">
           <a class="nav-link" href="#">{{ user.username }}</a>
         </li>

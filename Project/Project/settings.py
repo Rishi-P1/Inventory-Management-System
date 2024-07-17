@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 LOGIN_REDIRECT_URL = '/dashboard'
+LOGIN_URL = 'login'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 

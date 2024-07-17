@@ -1,5 +1,30 @@
 {% extends 'inventory/base.html' %} 
 
 {% block content %}
-<h1>Hello World!</h1>
+
+{% if user.is_authenticated %}
+
+<div class="p-2 mt-5 text-center">
+	<h2>Start Tracking Your Inventory</h2>
+	<div class="p-2 my-3">
+		<button type="button" class="btn btn-success">
+			<a class="text-white" href="{% url 'dashboard' %}">Dashboard</a>
+		</button>
+	</div>
+	<div class="p-2 my-3">
+		<button type="button" class="btn btn-info">
+			<a class="text-white" href="{% url 'inventory' %}">Inventory</a>
+		</button>
+	</div>
+	<div class="p-2 my-3">
+		<button type="button" class="btn btn-warning">
+			<a class="text-white" href="#">Finance</a>
+		</button>
+	</div>
+	
+</div>
+
+
+{% endif %}
+
 {% endblock content %}
