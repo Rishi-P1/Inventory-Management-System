@@ -15,9 +15,13 @@ class Inventory(LoginRequiredMixin, View):
 
 		return render(request, 'inventory/inventory.html', {'items': items})
 
-class Dashboard(View):
+class Dashboard(LoginRequiredMixin, View):
 	def get(self, request):
 		return render(request, 'inventory/dashboard.html')
+
+class Finance(LoginRequiredMixin, View):
+	def get(self, request):
+		return render(request, 'inventory/finance.html')
 
 class SignUpView(View):
 	def get(self, request):

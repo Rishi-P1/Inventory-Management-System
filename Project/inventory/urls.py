@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from .views import Index, SignUpView, Dashboard, Inventory
+from .views import Index, SignUpView, Dashboard, Inventory, Finance
 from django.contrib.auth import views as authViews
 
 urlpatterns = [
@@ -11,4 +11,5 @@ urlpatterns = [
 	path('logout/', authViews.LogoutView.as_view(template_name='inventory/logout.html'), name='logout'),
 	path('inventory/', Inventory.as_view(), name='inventory'),
 	path('dashboard/', Dashboard.as_view(), name='dashboard'),
+	path('finance/', Finance.as_view(), name='finance'),
 ]
